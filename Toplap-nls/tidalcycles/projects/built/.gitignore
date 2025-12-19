@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor backups
+*~
+*.swp
+*.swo
+*#
+
+# TidalCycles / SuperCollider
+*.sc~
+.#*.tidal
+
+# Logs
+*.log
+
+# Audio exports (if any)
+*.wav
+*.aiff
+*.flac
+recordings/
+
+# Project specific
+tmp/
+temp/

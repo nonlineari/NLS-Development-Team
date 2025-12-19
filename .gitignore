@@ -1,0 +1,36 @@
+# Binary files
+*.tar.gz
+*.zip
+*.dmg
+*.pkg
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Special character directories (likely temporary)
+[N}º]
+
+# Editor files
+*.sublime-*
+.vscode/
+.idea/
+
+# Audio/Video (if large)
+*.wav
+*.mp3
+*.mp4
+*.avi
+
+# Compiled files
+*.pyc
+__pycache__/
+*.o
+*.so

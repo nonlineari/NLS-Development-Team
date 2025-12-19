@@ -1,0 +1,24 @@
+-- BuilT: TidalCycles Live Coding Project
+-- Created: 2025-12-16
+-- 
+-- Boot Tidal: Cmd+Shift+Enter
+-- Evaluate line/selection: Shift+Enter
+-- Stop all: hush
+
+-- Set tempo (adjust as needed)
+setcps (120/60/4)
+
+-- Channel 1: Drums
+d1 $ sound "bd sd bd sd"
+
+-- Channel 2: 
+d2 silence
+
+-- Channel 3: 
+d3 silence
+
+-- Channel 4: 
+d4 silence
+
+-- Stop all channels
+-- hush

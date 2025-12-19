@@ -1,0 +1,28 @@
+-- Tidal → Renoise via MIDI (IAC)
+-- Open this in your editor (VS Code or Atom) and evaluate blocks
+
+:{
+import Sound.Tidal.Context
+import Sound.Tidal.MIDI.Context
+
+-- List available MIDI devices
+devs <- midiDevices
+:}
+
+-- Connect to IAC virtual bus on channel 1
+m1 <- midiStream devs "IAC Driver Bus 1" 1 synthController
+
+-- Simple bassline
+d1 $ n "0 ~ 0 7" # sound "bass"  -- if also using SuperDirt (optional)
+
+-- Drive Renoise instrument on the IAC bus
+m1 $ note "0 0 0 7" # velocity 0.9 # sustain 0.2
+
+-- Euclidean melody
+m1 $ note (scale "minor" "0 2 4 7 9")
+  # legato 0.9
+  # midichan 1
+  # velocity "0.6 0.8 0.7 0.9"
+
+-- Stop sending
+m1 silence

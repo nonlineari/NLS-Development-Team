@@ -1,0 +1,30 @@
+-- BootTidal (advanced) — OSC to Renoise via xRules or native OSC
+-- This is a starting point; you may need to adapt the Shape to your rules.
+
+:{
+import Sound.Tidal.Context
+
+let oscmap = [
+      -- Map params to 4 ints: instrument, track, note, velocity
+      ("inst", VI), ("track", VI), ("n", VI), ("vel", VI)
+      ]
+
+    renoiseShape = OSC (Target {oName = "renoise"
+                               , oAddress = "127.0.0.1"
+                               , oPort = 8000   -- default Renoise OSC port
+                               , oLatency = 0.02
+                               , oWindow = Nothing
+                               , oHandshake = False
+                               , oBundle = Just True
+                               })
+                       (Path "/renoise/trigger/note_on" oscmap)
+
+-- Create a separate stream (r1, r2, ...)
+(r1, r1_reset) <- stream renoiseShape (
+  defaultConfig {cFrameTimespan = 1/20}
+  )
+
+-- Example: send C minor notes on track 1, instrument 0, velocity 100
+r1 $ control $ s "renoise" 
+  # inst 0 # track 1 # n "0 3 5 7" # vel 100
+:}
