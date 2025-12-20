@@ -1,1 +1,0 @@
-source ~/projects/toplap-nls/Toplap-nls/venv/bin/activate
