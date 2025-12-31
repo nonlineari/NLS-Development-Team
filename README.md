@@ -290,7 +290,7 @@ Feel free to:
 
 ## License
 
-MIT License - See LICENSE file for details
+Dual-licensed under MIT OR GPL-3.0-or-later. See LICENSE and COPYING files for details.
 
 ---
 
@@ -308,7 +308,6 @@ MIT License - See LICENSE file for details
 
 - **Issues**: [GitHub Issues](https://github.com/nonlineari/toplap-nls/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/nonlineari/toplap-nls/discussions)
-- **Contact**: jimmy@nlsrecordings.com
 
 ---
 

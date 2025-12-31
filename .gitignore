@@ -34,3 +34,42 @@
 __pycache__/
 *.o
 *.so
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# Configuration files with credentials
+config.yml
+config.yaml
+config.local.json
+config.local.yml
+*.secret
+
+# Private documentation and AI system files
+WARP.md
+WARP_*.md
+*_WARP.md
+NLS_BACKEND_ARCHITECTURE.md
+PLAN_*.md
+
+# API keys and credentials
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Personal data and logs
+data/
+logs/
+*.log
+*.db
+*.sqlite
+
+# AWS and cloud credentials
+.aws/
+.gcloud/
+.azure/
