@@ -18,6 +18,7 @@ This repository provides:
 - **Project templates** - Ready-to-use templates for live coding sessions
 - **Visual detection integration** - Object detection with Darknet/YOLO for reactive performances
 - **THE FORMAT™ framework** - Executive and infrastructure documentation for web3 music events
+- **Knowledge Base** - Complete documentation for NLS Artist Systems tracker device (see [knowledge-base/](./knowledge-base/))
 
 ---
 
@@ -63,39 +64,33 @@ This repository provides:
 toplap-nls/
 ├── README.md                          # This file
 ├── WARP.md                            # AI assistant guidance
+├── knowledge-base/                    # NLS Tracker Device Knowledge Base
+│   ├── README.md                      # Knowledge base overview
+│   ├── 01-hardware/                   # Hardware documentation
+│   ├── 02-software/                   # Software documentation
+│   ├── 03-integration/                # Integration guides
+│   ├── 04-development/                # Development guides
+│   └── ...                            # See knowledge-base/README.md
 ├── Toplap-nls/tidalcycles/           # TidalCycles resources
 │   ├── livecode-manuals/             # 10 comprehensive manuals
-│   │   ├── 01-getting-started.md
-│   │   ├── 02-pattern-basics.md
-│   │   ├── 03-samples-and-synths.md
-│   │   ├── 04-effects.md
-│   │   ├── 05-advanced-patterns.md
-│   │   ├── 06-scales-and-melody.md
-│   │   ├── 07-performance-techniques.md
-│   │   ├── 08-midi-osc-integration.md
-│   │   ├── 09-troubleshooting.md
-│   │   └── 10-reference-quick.md
 │   ├── projects/                     # Project templates
-│   │   ├── built/                    # Basic TidalCycles template
-│   │   ├── renoise/                  # Renoise MIDI integration
-│   │   ├── ffmpeg Cmd Data/          # Metadata embedding scripts
-│   │   └── visual-shaders/           # GLSL shader examples
-│   ├── INSTALLATION-GUIDE.md
-│   ├── VSCODE-SETUP.md
-│   ├── MULTIMODAL-SETUP.md
-│   ├── startup.scd                   # SuperCollider auto-start config
-│   └── install-superdirt.scd         # SuperDirt installation
+│   └── ...
 ├── projects/visual-detection/        # Computer vision integration
-│   ├── README.md                     # Integration guide
-│   └── algorithm.md                  # Implementation plan
 └── the-format/                       # THE FORMAT™ framework
-    ├── executive-orchestration.md
-    ├── Nexus.md
-    ├── NeXT.md
-    ├── Contact.md
-    ├── Modular-of-end-user.md
-    └── Satoshi Dreams Nakamoto.md
 ```
+
+---
+
+## Knowledge Base: NLS Tracker Device
+
+This repository now includes comprehensive documentation for the **NLS Artist Systems tracker device** - an open source hardware platform for real-time tracking and integration with live coding environments.
+
+**Quick Links:**
+- [Knowledge Base Overview](./knowledge-base/README.md)
+- [Hardware Documentation](./knowledge-base/01-hardware/)
+- [Software Documentation](./knowledge-base/02-software/)
+- [Integration Guides](./knowledge-base/03-integration/)
+- [Development Guides](./knowledge-base/04-development/)
 
 ---
 
@@ -279,6 +274,7 @@ Contributions welcome! This repository documents:
 - TidalCycles learning resources
 - Integration patterns for visual music
 - Web3 music event frameworks
+- NLS Tracker Device documentation
 
 Feel free to:
 - Report issues
@@ -313,6 +309,6 @@ Dual-licensed under MIT OR GPL-3.0-or-later. See LICENSE and COPYING files for d
 
 **Status**: Active Development  
 **Version**: 1.0.0  
-**Last Updated**: December 2024
+**Last Updated**: February 2025
 
 *"Let my people go surfing."*
