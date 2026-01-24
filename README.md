@@ -18,7 +18,7 @@ This repository provides:
 - **Project templates** - Ready-to-use templates for live coding sessions
 - **Visual detection integration** - Object detection with Darknet/YOLO for reactive performances
 - **THE FORMAT™ framework** - Executive and infrastructure documentation for web3 music events
-- **Knowledge Base** - Complete documentation for NLS Artist Systems tracker device (see [knowledge-base/](./knowledge-base/))
+- **Knowledge Base** - Complete documentation for NLS Artist Systems tracker device (see [knowledge-base/](./tree/knowledge-base/))
 
 ---
 
