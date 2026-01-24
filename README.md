@@ -1,314 +1,218 @@
-# toplap-nls
+# Knowledge Base: Open Source Tracker Device for NLS Artist Systems
 
-**TidalCycles Live Coding Environment with Visual Music Integration**
+Welcome to the knowledge base for the open source tracker device designed for NLS Artist Systems. This documentation provides comprehensive information about hardware, software, integration, development, and community resources.
 
-A comprehensive resource repository for audio-visual live coding using TidalCycles, SuperCollider, and computer vision integration. Created by Jimmy Howe / NLS Records.
-
-[![TidalCycles](https://img.shields.io/badge/TidalCycles-v1.9.5-blue)](https://tidalcycles.org)
-[![SuperCollider](https://img.shields.io/badge/SuperCollider-3.13-orange)](https://supercollider.github.io)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/license-CC--BY--SA--4.0-green)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-125%2B%20files-blue)](./README.md)
 
 ---
 
-## Overview
+## Quick Navigation
 
-This repository provides:
-- **Comprehensive TidalCycles documentation** - 10 learning manuals from beginner to advanced
-- **Installation and setup guides** - For VS Code, SuperCollider, and multimodal environments
-- **Project templates** - Ready-to-use templates for live coding sessions
-- **Visual detection integration** - Object detection with Darknet/YOLO for reactive performances
-- **THE FORMAT™ framework** - Executive and infrastructure documentation for web3 music events
-- **Knowledge Base** - Complete documentation for NLS Artist Systems tracker device (see [knowledge-base/](./tree/knowledge-base/))
+### 🚀 Getting Started
+- [Hardware Architecture](./01-hardware/specifications/architecture.md) - Understand the device architecture
+- [Hardware Setup](./04-development/getting-started/hardware-setup.md) - Set up your hardware
+- [Software Setup](./04-development/getting-started/software-setup.md) - Configure software
+- [First Build](./04-development/getting-started/first-build.md) - Build your first project
+- [Network Installation](./04-development/getting-started/network-installation.md) - Network setup guide
+- [Developer Quick Reference](./04-development/getting-started/dev-quick-reference.md) - Quick setup for dev team
+
+### 📚 Documentation Sections
+
+1. **[Hardware Documentation](./01-hardware/)** - Hardware specifications, assembly, and schematics
+2. **[Software Documentation](./02-software/)** - Firmware, protocols, and data formats
+3. **[Integration Guides](./03-integration/)** - NLS systems and external integrations
+4. **[Development Guides](./04-development/)** - APIs, SDKs, and deployment
+5. **[Research & Reference](./05-research/)** - Patent analysis and architecture patterns
+6. **[Community Resources](./06-community/)** - Contributing guidelines and communication
+7. **[Use Cases & Examples](./07-use-cases/)** - Artistic and technical use cases
+8. **[Troubleshooting](./08-troubleshooting/)** - Common issues and diagnostic tools
+9. **[Security & Privacy](./09-security/)** - Security architecture and best practices
+10. **[Performance & Optimization](./10-performance/)** - Metrics and optimization strategies
+11. **[Roadmap](./11-roadmap/)** - Future development plans
 
 ---
 
-## Quick Start
+## Project Overview
 
-### Prerequisites
+The NLS Artist Systems tracker device is an open source hardware platform designed for:
+- **Real-time position and motion tracking** - High-frequency sensor data collection
+- **Integration with TidalCycles** - Native OSC support for live coding environments
+- **Visual tracking via OpenCV** - Computer vision integration
+- **P2P networking** - Hyperbeam-based collaborative performances
+- **Multi-device coordination** - Synchronized artistic installations
 
-- **macOS** (tested on Sequoia)
-- **Homebrew** package manager
-- **Git** version control
+---
 
-### Installation
+## Key Features
 
-1. **Clone this repository**
-   ```bash
-   git clone https://github.com/nonlineari/toplap-nls.git
-   cd toplap-nls
-   ```
-
-2. **Install core dependencies**
-   ```bash
-   # Install Haskell (GHCup)
-   curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-   
-   # Install SuperCollider
-   brew install --cask supercollider
-   
-   # Install TidalCycles
-   cabal update
-   cabal install tidal
-   ```
-
-3. **Follow detailed guides**
-   - [Installation Guide](Toplap-nls/tidalcycles/INSTALLATION-GUIDE.md)
-   - [VS Code Setup](Toplap-nls/tidalcycles/VSCODE-SETUP.md)
-   - [Multimodal Setup](Toplap-nls/tidalcycles/MULTIMODAL-SETUP.md)
+- **Open Source Hardware**: Complete schematics and BOM available
+- **Modular Design**: Expandable with custom sensors and modules
+- **NLS Integration**: Native support for TidalCycles, Hyperfone, and Pulsar Agent
+- **Real-time Communication**: OSC, MQTT, WebSocket support
+- **Edge Computing**: Local processing capabilities
+- **Community Driven**: Open development and contribution process
 
 ---
 
 ## Repository Structure
 
 ```
-toplap-nls/
+knowledge-base/
 ├── README.md                          # This file
-├── WARP.md                            # AI assistant guidance
-├── knowledge-base/                    # NLS Tracker Device Knowledge Base
-│   ├── README.md                      # Knowledge base overview
-│   ├── 01-hardware/                   # Hardware documentation
-│   ├── 02-software/                   # Software documentation
-│   ├── 03-integration/                # Integration guides
-│   ├── 04-development/                # Development guides
-│   └── ...                            # See knowledge-base/README.md
-├── Toplap-nls/tidalcycles/           # TidalCycles resources
-│   ├── livecode-manuals/             # 10 comprehensive manuals
-│   ├── projects/                     # Project templates
-│   └── ...
-├── projects/visual-detection/        # Computer vision integration
-└── the-format/                       # THE FORMAT™ framework
+├── CONTRIBUTING.md                     # How to contribute
+├── CODE_OF_CONDUCT.md                  # Community guidelines
+├── ACKNOWLEDGMENTS.md                  # Credits and thanks
+│
+├── 01-hardware/                       # Hardware Documentation
+│   ├── specifications/                # Architecture, components, connectivity
+│   ├── assembly/                      # BOM, assembly guide, testing
+│   └── schematics/                    # Hardware diagrams
+│
+├── 02-software/                       # Software Documentation
+│   ├── firmware/                      # Firmware overview, OS selection, OTA
+│   ├── protocols/                     # MQTT, WebSocket, OSC, custom protocols
+│   └── data-formats/                  # JSON schemas, MessagePack, Protobuf
+│
+├── 03-integration/                    # Integration Guides
+│   ├── nls-systems/                   # TidalCycles, Hyperfone, Pulsar Agent
+│   ├── external/                      # Ableton, VDMX, Web3/Blockchain
+│   └── examples/                      # Setup examples and tutorials
+│
+├── 04-development/                    # Development Guides
+│   ├── getting-started/               # Setup guides and quick reference
+│   ├── api/                           # REST, WebSocket, MQTT, CLI APIs
+│   ├── sdks/                          # Python, JavaScript, Rust, C++ SDKs
+│   └── deployment/                    # Single/multi-device, cloud, edge
+│
+├── 05-research/                       # Research & Reference
+│   ├── patent-analysis/               # Device management, content delivery
+│   ├── architecture-patterns/         # System architecture, data flow
+│   └── technology-comparison/        # Protocols, OS, hardware platforms
+│
+├── 06-community/                      # Community Resources
+│   ├── contributing/                 # Code, docs, testing guidelines
+│   ├── communication/                # Forums, chat, mailing lists
+│   └── project-management/           # Issue tracking, roadmap, releases
+│
+├── 07-use-cases/                     # Use Cases & Examples
+│   ├── artistic/                     # Live performance, studio integration
+│   ├── technical/                    # Motion capture, ML data collection
+│   └── examples/                     # Tutorial and advanced projects
+│
+├── 08-troubleshooting/                # Troubleshooting & Support
+│   ├── hardware-issues/              # Power, connectivity, sensors
+│   ├── software-issues/              # Updates, configuration, network
+│   └── diagnostic-tools/            # Built-in and external tools
+│
+├── 09-security/                       # Security & Privacy
+│   ├── security-architecture/        # Device, network, secure boot
+│   ├── privacy/                       # Data privacy, GDPR, anonymization
+│   └── best-practices/               # Secure coding, vulnerability reporting
+│
+├── 10-performance/                    # Performance & Optimization
+│   ├── metrics/                       # Device and system performance
+│   ├── optimization/                  # Code, power, network, storage
+│   └── scaling/                       # Load balancing, caching, distributed
+│
+├── 11-roadmap/                        # Roadmap & Future
+│   ├── short-term.md                 # 0-6 months
+│   ├── medium-term.md                 # 6-12 months
+│   ├── long-term.md                   # 12+ months
+│   └── feature-requests.md
+│
+└── templates/                         # Documentation Templates
+    ├── hardware-spec-template.md
+    ├── api-doc-template.md
+    ├── integration-guide-template.md
+    └── use-case-template.md
 ```
 
 ---
 
-## Knowledge Base: NLS Tracker Device
+## Quick Start Guide
 
-This repository now includes comprehensive documentation for the **NLS Artist Systems tracker device** - an open source hardware platform for real-time tracking and integration with live coding environments.
+### For Developers
 
-**Quick Links:**
-- [Knowledge Base Overview](./knowledge-base/README.md)
-- [Hardware Documentation](./knowledge-base/01-hardware/)
-- [Software Documentation](./knowledge-base/02-software/)
-- [Integration Guides](./knowledge-base/03-integration/)
-- [Development Guides](./knowledge-base/04-development/)
+1. **Hardware Setup**
+   - Review [Hardware Architecture](./01-hardware/specifications/architecture.md)
+   - Follow [Hardware Setup Guide](./04-development/getting-started/hardware-setup.md)
+   - Check [Developer Quick Reference](./04-development/getting-started/dev-quick-reference.md)
 
----
+2. **Software Setup**
+   - Set up [Development Environment](./04-development/getting-started/development-environment.md)
+   - Configure [Network Installation](./04-development/getting-started/network-installation.md)
+   - Build your [First Project](./04-development/getting-started/first-build.md)
 
-## Documentation
+3. **Integration**
+   - [TidalCycles Integration](./03-integration/nls-systems/tidalcycles.md)
+   - [OSC Protocol](./02-software/protocols/osc.md)
+   - [Basic Setup Example](./03-integration/examples/basic-setup.md)
 
-### TidalCycles Learning Path
+### For Users
 
-**Beginner** (Start here)
-1. [Getting Started](Toplap-nls/tidalcycles/livecode-manuals/01-getting-started.md) - Installation and first patterns
-2. [Pattern Basics](Toplap-nls/tidalcycles/livecode-manuals/02-pattern-basics.md) - Mini-notation and sequencing
-3. [Samples and Synths](Toplap-nls/tidalcycles/livecode-manuals/03-samples-and-synths.md) - Sound sources
-4. [Effects](Toplap-nls/tidalcycles/livecode-manuals/04-effects.md) - Audio processing
+1. **Assembly**
+   - Review [Bill of Materials](./01-hardware/assembly/bom.md)
+   - Follow [Assembly Guide](./01-hardware/assembly/assembly-guide.md)
+   - Run [Testing Procedures](./01-hardware/assembly/testing-procedures.md)
 
-**Intermediate**
-5. [Advanced Patterns](Toplap-nls/tidalcycles/livecode-manuals/05-advanced-patterns.md) - Transformations and combinations
-6. [Scales and Melody](Toplap-nls/tidalcycles/livecode-manuals/06-scales-and-melody.md) - Musical theory integration
-7. [Performance Techniques](Toplap-nls/tidalcycles/livecode-manuals/07-performance-techniques.md) - Live coding strategies
-
-**Advanced**
-8. [MIDI/OSC Integration](Toplap-nls/tidalcycles/livecode-manuals/08-midi-osc-integration.md) - External control
-9. [Troubleshooting](Toplap-nls/tidalcycles/livecode-manuals/09-troubleshooting.md) - Common issues
-10. [Quick Reference](Toplap-nls/tidalcycles/livecode-manuals/10-reference-quick.md) - Command cheat sheet
-
-### Setup Guides
-
-- **[Installation Guide](Toplap-nls/tidalcycles/INSTALLATION-GUIDE.md)** - Complete setup from scratch
-- **[VS Code Setup](Toplap-nls/tidalcycles/VSCODE-SETUP.md)** - Editor configuration
-- **[Multimodal Setup](Toplap-nls/tidalcycles/MULTIMODAL-SETUP.md)** - Audio + visual integration
-
----
-
-## Visual Detection Integration
-
-Integrate real-time object detection with TidalCycles for reactive performances:
-
-### Features
-- **Darknet/YOLO** object detection
-- **OSC bridge** for TidalCycles communication
-- **Reactive patterns** based on audience detection
-- **Custom metrics** (AP50-style for A/V sync)
-
-### Quick Start
-```bash
-cd projects/visual-detection
-cat README.md          # Full integration guide
-cat algorithm.md       # Implementation plan
-```
-
-### Use Cases
-- Detect audience members → modulate sound density
-- Track performer gestures → control effects
-- Object positions → stereo panning
-- Detection confidence → volume control
-
----
-
-## THE FORMAT™ Framework
-
-Documentation for web3 music event orchestration and executive planning:
-
-- **[Executive Orchestration](the-format/executive-orchestration.md)** - Assembly structure
-- **[Nexus](the-format/Nexus.md)** - Programming and engagement strategy
-- **[NeXT](the-format/NeXT.md)** - Infrastructure and cost planning
-- **[Contact](the-format/Contact.md)** - Revenue streams and metrics
-- **[Modular of End-User](the-format/Modular-of-end-user.md)** - Philosophical foundations
-- **[Satoshi Dreams Nakamoto](the-format/Satoshi Dreams Nakamoto.md)** - Film concept
-
----
-
-## Project Templates
-
-### Built Template
-Ready-to-use TidalCycles project structure:
-```bash
-cd Toplap-nls/tidalcycles/projects/built
-code built.tidal
-```
-
-### Renoise Integration
-MIDI control for Renoise DAW:
-```bash
-cd Toplap-nls/tidalcycles/projects/renoise
-cat README-RENOISE.md
-```
-
-### FFmpeg Metadata
-Embed metadata in recorded performances:
-```bash
-cd "Toplap-nls/tidalcycles/projects/ffmpeg Cmd Data"
-source embed-metadata.sh
-```
-
-### Visual Shaders
-GLSL shaders for audio-reactive visuals:
-```bash
-cd Toplap-nls/tidalcycles/projects/visual-shaders
-cat audio-reactive.frag
-```
-
----
-
-## Workflow
-
-### Standard Live Coding Session
-
-1. **Start SuperCollider**
-   ```supercollider
-   s.boot;
-   SuperDirt.start;
-   ```
-
-2. **Start TidalCycles in VS Code**
-   - Open a `.tidal` file
-   - Press `Cmd+Shift+Enter` to boot Tidal
-   - Press `Shift+Enter` to evaluate patterns
-
-3. **Write patterns**
-   ```haskell
-   d1 $ sound "bd sd bd sd"
-   d2 $ sound "arpy*4" # note "0 2 4 7"
-   ```
-
-4. **Stop all**
-   ```haskell
-   hush
-   ```
-
-### With Visual Detection
-
-1. Follow standard setup above
-2. Start detection bridge:
-   ```bash
-   cd projects/visual-detection
-   python3 detect_to_osc.py 0  # 0 = webcam
-   ```
-3. Use detection data in patterns:
-   ```haskell
-   d1 $ sound "bd*<person_count>" # gain 0.9
-   ```
-
----
-
-## Key Technologies
-
-### Core
-- **[TidalCycles](https://tidalcycles.org)** - Pattern-based live coding language (Haskell)
-- **[SuperCollider](https://supercollider.github.io)** - Audio synthesis server
-- **[SuperDirt](https://github.com/musikinformatik/SuperDirt)** - Sample engine for TidalCycles
-
-### Editors
-- **VS Code** - Primary editor with TidalCycles extension
-- **Atom/VEDA** - Alternative with GLSL support
-- **Hydra** - Browser-based visual synthesis
-
-### Integration
-- **OSC** - Open Sound Control protocol
-- **MIDI** - Hardware/software control
-- **Darknet/YOLO** - Object detection
-- **FFmpeg** - Media processing
-
----
-
-## Community
-
-### Resources
-- **TidalCycles Forum**: https://club.tidalcycles.org
-- **TOPLAP**: International live coding community
-- **Discord**: TidalCycles community server
-- **GitHub**: https://github.com/tidalcycles/Tidal
-
-### Credits
-- **Created by**: Jimmy Howe ([@jimmyhowe](https://github.com/nonlineari))
-- **Label**: NLS Records
-- **Platform**: [nlsrecordings.com](https://nlsrecordings.com)
+2. **Configuration**
+   - [Network Installation](./04-development/getting-started/network-installation.md)
+   - [Software Setup](./04-development/getting-started/software-setup.md)
+   - [Basic Setup Example](./03-integration/examples/basic-setup.md)
 
 ---
 
 ## Contributing
 
-Contributions welcome! This repository documents:
-- TidalCycles learning resources
-- Integration patterns for visual music
-- Web3 music event frameworks
-- NLS Tracker Device documentation
+We welcome contributions! Please see our:
+- [Contributing Guidelines](./CONTRIBUTING.md) - How to contribute
+- [Code of Conduct](./CODE_OF_CONDUCT.md) - Community guidelines
+- [Community Resources](./06-community/) - Communication and project management
 
-Feel free to:
-- Report issues
-- Submit improvements to documentation
-- Share your own patterns and templates
-- Contribute integration examples
+### Quick Contribution Steps
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+See [Contributing Guidelines](./CONTRIBUTING.md) for detailed instructions.
+
+---
+
+## Resources
+
+- **GitHub Repository**: [nonlineari/NLS-Development-Team](https://github.com/nonlineari/NLS-Development-Team)
+- **Main Repository**: [nonlineari/toplap-nls](https://github.com/nonlineari/toplap-nls) (private)
+- **Documentation Structure**: See [KNOWLEDGE_BASE_STRUCTURE.md](../KNOWLEDGE_BASE_STRUCTURE.md) (if available)
+- **Project Plan**: See [KNOWLEDGE_BASE_PLAN.md](../KNOWLEDGE_BASE_PLAN.md) (if available)
 
 ---
 
 ## License
 
-Dual-licensed under MIT OR GPL-3.0-or-later. See LICENSE and COPYING files for details.
+This documentation is licensed under **CC BY-SA 4.0** (Creative Commons Attribution-ShareAlike 4.0 International). Hardware designs follow the project's open source license.
 
 ---
 
 ## Acknowledgments
 
-- **TidalCycles** by Alex McLean
-- **SuperCollider** community
-- **TOPLAP** live coding community
-- **Darknet/YOLO** by Joseph Redmon, Alexey Bochkovskiy
-- **ByteTrack** by Yifu Zhang et al.
+Thank you to all contributors! See [ACKNOWLEDGMENTS.md](./ACKNOWLEDGMENTS.md) for details.
 
 ---
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/nonlineari/toplap-nls/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/nonlineari/toplap-nls/discussions)
+- **Issues**: [GitHub Issues](https://github.com/nonlineari/NLS-Development-Team/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/nonlineari/NLS-Development-Team/discussions)
 
 ---
 
-**Status**: Active Development  
+**Last Updated**: 2025-02-02  
 **Version**: 1.0.0  
-**Last Updated**: February 2025
+**Maintainer**: NLS Artist Systems Documentation Team
 
-*"Let my people go surfing."*
+---
+
+*"Building the future of open source tracking for live coding and artistic expression."*
